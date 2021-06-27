@@ -1,0 +1,30 @@
+{
+    "description": "Extract the HPath from a given element.",
+    "manifest_version": 2,
+    "name": "HPath Locator",
+    "version": "0.0.1",
+    "homepage_url": "https://github.com/kabinja/hpath",
+    "icons": {
+      "48": "book.svg"
+    },
+  
+    "permissions": [
+      "contextMenus"
+    ],
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "all_frames": true,
+      "match_about_blank": true
+    }],
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "{4470c45c-08fb-408a-bdb3-2e9487f3f45e}",
+        "strict_min_version": "42.0"
+      }
+    }
+  }
+  
